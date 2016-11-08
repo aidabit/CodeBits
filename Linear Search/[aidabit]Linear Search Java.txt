@@ -1,0 +1,25 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+/* Java works by object creation. The main is in a class too. */
+/* In Java there is no need to tell the compiler prior that there exists a function. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		int[] array = {1,7,2,4,3,6,9,0,5};
+		int valueSearching = 7;
+		System.out.println("Searching for " + valueSearching + " in array...");
+		System.out.println(valueSearching + " was found in place number " + searchArray(valueSearching, array));
+	}
+	
+	public static int searchArray(int valueSearching, int[] array) { //Java array has the length of the array.
+	    for (int i = 0; i < array.length; i++) {
+	        if (array[i] == valueSearching) {
+	            return i;
+	        }
+	    }
+	    return -1;
+	}
+	
+}

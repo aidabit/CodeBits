@@ -1,0 +1,25 @@
+
+'''
+In Python it is not necessary to have a main function
+however to assimilate the code you can have it like this
+'''
+
+#In python you have to make sure to create the functions first before calling them.
+def main():
+    
+    array = [1,7,2,4,3,6,9,0,5];
+    valueSearching = 7;
+    print("Searching for {0} in array...".format(valueSearching));
+    print("{0} was found in place number {1}.".format(valueSearching, searchArray(valueSearching, array)));
+    
+    
+def searchArray(valueSearching, array):
+    for i in range(0, len(array)):
+        if array[i] == valueSearching:
+            return i;
+    
+    
+    return -1;
+
+#This is the only line that will be read because all the other ones are function creations.
+main();

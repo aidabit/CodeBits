@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+
+
+int searchArray(int valueSearching, int * array, int arraySize);
+
+
+int main()
+{
+    int array[] = {1,7,2,4,3,6,9,0,5};
+    int valueSearching = 7;
+    printf("Searching for %d in array...\n", valueSearching);
+    printf("%d was found in place number %d.", valueSearching, searchArray(valueSearching, array, 10));
+}
+
+int searchArray(int valueSearching, int * array, int arraySize) {
+    for (int i = 0; i < arraySize; i++) {
+        if (array[i] == valueSearching) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+/*
+Passing an array from A to B with pointer
+int searchArray(int * stuff);
+
+int main() {
+    
+    int array[] = {1, 2, 3, 4, 5};
+    searchArray(array);
+    
+}
+
+int searchArray(int * stuff) {
+    for (int i = 0; i < 2; i++) {
+        printf("%d", stuff[i]);
+    }
+}
+*/
